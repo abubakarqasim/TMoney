@@ -20,100 +20,30 @@ public class Login {
     }
 
 
-    private By clickonboarding1 = By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView");
-    private By clickonboarding2 = By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView");
-
-    private By clickonboarding3 = By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView");
-
-    private By clickonboarding4 = By.xpath("//android.widget.FrameLayout[@resource-id=\"android:id/content\"]/android.widget.FrameLayout/android.widget.FrameLayout/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.widget.ImageView");
-
-    private By clickprefix = By.xpath("//android.view.View[@content-desc=\"032\"]/android.widget.ImageView[2]");
-
-    private By selectprefix = By.xpath("//android.view.View[@content-desc=\"038\"]");
-
     private By clickmsisdn = By.className("android.widget.EditText");
 
-    private By sendmsisdn = By.className("android.widget.EditText");
+    private By entermsisdn = By.className("android.widget.EditText");
 
-    private By clickvalidate = By.xpath("//android.view.View[@content-desc=\"Valider\"]");
+    private By clickconfirmer = By.xpath("//android.view.View[@content-desc=\"Confirmer\"]");
 
-    private By clickotp = By.xpath("//android.widget.EditText");
+    private By OTP = By.xpath("//android.widget.EditText");
 
-    private By sendotp = By.xpath("//android.widget.EditText");
 
-    private By clickPIN = By.xpath("//android.widget.EditText[@text=\"\"]");
+    private By clickpin = By.className("android.widget.EditText");
 
-    private By sendPIN = By.xpath("//android.widget.EditText[@text=\"\"]");
+    private By sendpin = By.className("android.widget.EditText");
 
-    public void clickOnOnboarding1() {
+    private By clicklogin = By.xpath("//android.view.View[@content-desc=\"Se connecter\"]");
+
+    private By acceptbiometric = By.xpath("//android.view.View[@content-desc=\"Sauter pour l'instant\"]");
+
+
+
+
+    public void clickmsisdn()
+    {
         try {
-            Thread.sleep(5000); // Adding a 2-second pause (adjust as needed)
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt(); // Reset interrupted status
-            e.printStackTrace(); // Print stack trace or handle the exception as needed
-        }
-
-        driver.findElement(clickonboarding1).click();
-    }
-
-    public void clickOnOnboarding2() {
-        try {
-            Thread.sleep(5000); // Adding a 2-second pause (adjust as needed)
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt(); // Reset interrupted status
-            e.printStackTrace(); // Print stack trace or handle the exception as needed
-        }
-
-        driver.findElement(clickonboarding2).click();
-    }
-
-    public void clickOnOnboarding3() {
-        try {
-            Thread.sleep(5000); // Adding a 2-second pause (adjust as needed)
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt(); // Reset interrupted status
-            e.printStackTrace(); // Print stack trace or handle the exception as needed
-        }
-
-        driver.findElement(clickonboarding3).click();
-    }
-
-    public void clickOnOnboarding4() {
-        try {
-            Thread.sleep(5000); // Adding a 2-second pause (adjust as needed)
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt(); // Reset interrupted status
-            e.printStackTrace(); // Print stack trace or handle the exception as needed
-        }
-
-        driver.findElement(clickonboarding4).click();
-    }
-
-    public void clickprefix() {
-        try {
-            Thread.sleep(5000); // Adding a 2-second pause (adjust as needed)
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt(); // Reset interrupted status
-            e.printStackTrace(); // Print stack trace or handle the exception as needed
-        }
-
-        driver.findElement(clickprefix).click();
-    }
-
-    public void selectprefix() {
-        try {
-            Thread.sleep(5000); // Adding a 2-second pause (adjust as needed)
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt(); // Reset interrupted status
-            e.printStackTrace(); // Print stack trace or handle the exception as needed
-        }
-
-        driver.findElement(selectprefix).click();
-    }
-
-    public void clickmsisdn() {
-        try {
-            Thread.sleep(5000); // Adding a 2-second pause (adjust as needed)
+            Thread.sleep(8000); // Adding a 2-second pause (adjust as needed)
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt(); // Reset interrupted status
             e.printStackTrace(); // Print stack trace or handle the exception as needed
@@ -122,7 +52,20 @@ public class Login {
         driver.findElement(clickmsisdn).click();
     }
 
-    public void sendmsisdn() {
+    public void entermsisdn()
+    {
+        try {
+            Thread.sleep(3000); // Adding a 2-second pause (adjust as needed)
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt(); // Reset interrupted status
+            e.printStackTrace(); // Print stack trace or handle the exception as needed
+        }
+
+        driver.findElement(entermsisdn).sendKeys("90009070");
+    }
+
+    public void clickconfirmer()
+    {
         try {
             Thread.sleep(5000); // Adding a 2-second pause (adjust as needed)
         } catch (InterruptedException e) {
@@ -130,10 +73,11 @@ public class Login {
             e.printStackTrace(); // Print stack trace or handle the exception as needed
         }
 
-        driver.findElement(sendmsisdn).sendKeys("7820827");
+        driver.findElement(clickconfirmer).click();
     }
 
-    public void clickvalidate() {
+    public void clickotp()
+    {
         try {
             Thread.sleep(5000); // Adding a 2-second pause (adjust as needed)
         } catch (InterruptedException e) {
@@ -141,10 +85,11 @@ public class Login {
             e.printStackTrace(); // Print stack trace or handle the exception as needed
         }
 
-        driver.findElement(clickvalidate).click();
+        driver.findElement(OTP).click();
     }
 
-    public void clickotp() {
+    public void sendotp()
+    {
         try {
             Thread.sleep(5000); // Adding a 2-second pause (adjust as needed)
         } catch (InterruptedException e) {
@@ -152,54 +97,57 @@ public class Login {
             e.printStackTrace(); // Print stack trace or handle the exception as needed
         }
 
-        driver.findElement(clickotp).click();
+        driver.findElement(OTP).sendKeys("5555");
     }
 
-    public void sendotp() {
+
+    public void clickpin()
+    {
         try {
-            Thread.sleep(5000); // Adding a 2-second pause (adjust as needed)
+            Thread.sleep(3000); // Adding a 2-second pause (adjust as needed)
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt(); // Reset interrupted status
             e.printStackTrace(); // Print stack trace or handle the exception as needed
         }
 
-        driver.findElement(sendotp).sendKeys("000000");
+        driver.findElement(clickpin).click();
     }
 
-    public void clickPIN() {
+    public void sendpin()
+    {
         try {
-            Thread.sleep(5000); // Adding a 2-second pause (adjust as needed)
+            Thread.sleep(3000); // Adding a 2-second pause (adjust as needed)
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt(); // Reset interrupted status
             e.printStackTrace(); // Print stack trace or handle the exception as needed
         }
 
-        driver.findElement(clickPIN).click();
+        driver.findElement(sendpin).sendKeys("009966");
     }
 
-    public void sendPIN() {
+    public void clicklogin()
+    {
         try {
-            Thread.sleep(5000); // Adding a 2-second pause (adjust as needed)
-        } catch (Exception e) {
+            Thread.sleep(7000); // Adding a 2-second pause (adjust as needed)
+        } catch (InterruptedException e) {
             Thread.currentThread().interrupt(); // Reset interrupted status
             e.printStackTrace(); // Print stack trace or handle the exception as needed
         }
 
-//        driver.findElement(clickPIN).click();
-
-        driver.findElement(sendPIN).sendKeys("0000");
-// Locate the PinCodeTextField element (adjust locator as necessary)
-//        WebElement pinCodeTextField = driver.findElement(Mobil.id("mg.telma.mvolaapp:id/pin_code_text_field"));
-//
-//        // Enter the pin code
-//        String pinCode = "2023";
-//        pinCodeTextField.sendKeys(pinCode);
-
-
-
+        driver.findElement(clicklogin).click();
     }
 
+    public void acceptbiometric()
+    {
+        try {
+            Thread.sleep(7000); // Adding a 2-second pause (adjust as needed)
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt(); // Reset interrupted status
+            e.printStackTrace(); // Print stack trace or handle the exception as needed
+        }
 
+        driver.findElement(acceptbiometric).click();
+    }
 
 }
 

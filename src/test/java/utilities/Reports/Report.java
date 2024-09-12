@@ -5,19 +5,17 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.WebDriver;
 
 import java.util.Date;
 public class Report {
-    //private WebDriver driver;
-    private AppiumDriver driver;
+    private WebDriver driver;
     ExtentSparkReporter spark;
     ExtentReports extentReports;
     ExtentTest extentTest;
 
     public Report(WebDriver driver) {
-        this.driver = (AppiumDriver) driver;
+        this.driver = driver;
 
     }
 
@@ -25,7 +23,7 @@ public class Report {
     public void extentReporter() {
 //        Date date = new Date();
 //        String rightNow = "SME"+ date.getTime() + ".html" ;
-        String rightNow = "MVola.html" ;
+        String rightNow = "SenegalPortal.html" ;
         String pathOfFile = "allReports/"+rightNow;
         spark = new ExtentSparkReporter(pathOfFile);
 
